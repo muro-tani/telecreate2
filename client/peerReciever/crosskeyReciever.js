@@ -5,6 +5,11 @@ var ButtonIdMap = {
   "39": "turnRight"
 }
 
+function keyRecieved(data) {
+  console.log(data);
+  keyPressed(data.key, data.pressed);
+}
+
 function keyPressed(key, pressed) {
   if (key < 37 || 40 < key) {
     return;
@@ -17,10 +22,3 @@ function keyPressed(key, pressed) {
     elem.style.backgroundColor = "yellow";
   }
 }
-
-document.addEventListener("keydown", function (e) {
-  keyPressed(e.which, true);
-});
-document.addEventListener("keyup", function (e) {
-  keyPressed(e.which, false);
-});

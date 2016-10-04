@@ -3,6 +3,10 @@
 <head>
 <meta charset="utf-8">
 <link rel="icon" type="image/png" href="../favicon.ico" />
+<script src="http://cdn.peerjs.com/0/peer.min.js"></script>
+<script type="text/javascript" src="peerRecieve.js"></script>
+<script type="text/javascript" src="crosskeyReciever.js"></script>
+
 <style>
 table, th, td {
     border: 1px solid black;
@@ -16,6 +20,22 @@ table, th, td {
 </head>
 <body>
 <h1>Arrow key reciever</h1>
+
+<div>
+      <input type="text" placeholder="Input your ID" id="my-id-input">
+      <button onclick="getmyID()">Get myID</button>
+</div>
+
+<!--Display both ID-->
+<div>
+    <p>MyID: <span id="my-id">-</span></p>
+    <p>PartnerID: <span id="partnerID">-</span></p>
+</div>
+
+
+
+
+<div id="receive_message"></div>
 <table style="width:30%">
   <tr>
     <th></th>
