@@ -13,7 +13,7 @@ function startPeerConnection() {
     peer.on('connection', function(conn) {
     	document.getElementById("partnerID").innerHTML = conn.peer;
 	    conn.on('data', function(data){
-	        document.getElementById("receive_message").innerHTML = "Data:" + data;
+	        document.getElementById("receive_message").innerHTML = "KeyCode:" + data.key + ", Pressed:" + data.pressed;
 	        keyRecieved(data);
 	    });
 		});

@@ -18,19 +18,9 @@ function startPeerConnection() {
 }
 
 function callStart(){
-    console.log("hello call start");
     partnerID = document.getElementById("partner-id-input").value;
-    console.log(partnerID);
     conn = peer.connect(partnerID);
     document.getElementById("partnerID").innerHTML = partnerID;
-}
-
-function sendHi(){
-    console.log("send HI!!");
-    conn.send('HI!');
-    conn.on('open', function(){        
-        console.log("sent HI!!");
-    }); 
 }
 
 function callEnd() {

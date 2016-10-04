@@ -14,8 +14,6 @@ function keyPressed(key, pressed) {
   if (key < 37 || 40 < key) {
     return;
   }
-  btnStatus.key = key;
-  btnStatus.pressed = pressed;
   console.log("Direction: " + ButtonIdMap[key] + ", pressed:" + pressed);
   let elem = document.getElementById(ButtonIdMap[key]);
   if (pressed) {
@@ -23,7 +21,10 @@ function keyPressed(key, pressed) {
   } else {
     elem.style.backgroundColor = "yellow";
   }
+
   //Send key data via peerJS
+  btnStatus.key = key;
+  btnStatus.pressed = pressed;
   conn.send(btnStatus);
 }
 

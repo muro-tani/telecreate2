@@ -29,19 +29,13 @@ table, th, td {
   <div>
       <input type="text" placeholder="Input partner ID" id="partner-id-input">
       <button onclick="callStart()">Start Call</button>
+      <button id="call-end" onclick="callEnd()">End Call</button>
   </div>
 
   <!--Display both ID-->
   <div>
       <p>MyID: <span id="myID">-</span></p>
       <p>PartnerID: <span id="partnerID">-</span></p>
-  </div>
-  
-  <!--Messagebox-->
-  <div>
-      <input type="text" placeholder="Input message" id="message">
-      <button id="send" onclick="sendHi()">SEND</button>
-      <button id="call-end" onclick="callEnd()">End Call</button>
   </div>
 
   <!--Display arrow keypad-->
