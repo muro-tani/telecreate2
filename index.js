@@ -13,6 +13,10 @@ app.get('/gamepadSample', function(req, res) {
     res.sendFile(__dirname + "/client/gamepadSample/index.html")
 });
 
+app.get('/crosskeyInput', function(req, res) {
+    res.sendFile(__dirname + "/client/crosskeyInput/index.html")
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });

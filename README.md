@@ -20,4 +20,4 @@ browse [localhost:](http://localhost:3333)
 * Other guidelines
 
 ### References ###
-[gamepadtest](https://github.com/luser/gamepadtest "threeJs cube sample")   
+[gamepadtest](https://github.com/luser/gamepadtest "threeJs cube sample") 
