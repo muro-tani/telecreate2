@@ -1,0 +1,23 @@
+{
+  "name": "telecreate2",
+  "version": "1.0.0",
+  "description": "controll irobot create2 using peerJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdra0624/telecreate2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cdra0624/telecreate2/issues"
+  },
+  "homepage": "https://github.com/cdra0624/telecreate2#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
