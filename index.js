@@ -17,6 +17,14 @@ app.get('/crosskeyInput', function(req, res) {
     res.sendFile(__dirname + "/client/crosskeyInput/index.html")
 });
 
+app.get('/peerSender', function(req, res) {
+    res.sendFile(__dirname + "/client/peerSender/index.html")
+});
+
+app.get('/peerReciever', function(req, res) {
+    res.sendFile(__dirname + "/client/peerReciever/index.html")
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
