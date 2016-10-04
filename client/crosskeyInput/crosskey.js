@@ -1,14 +1,26 @@
-var key;
-document.addEventListener("keypress", function(e) {
-  key = e.which || e.keyCode;
-  for (i = 37; i <= 40; i++) {
-    if(key === i) {
-      console.log("pressed keycode:" + i);
-      document.getElementById("keycode" + i).style.backgroundColor = "red";
-    }
+var ButtonIdMap = {
+  "38": "forward",
+  "40": "back",
+  "37": "turnLeft",
+  "39": "turnRight"
+}
+
+function keyPressed(key, pressed) {
+  if (key < 37 || 40 < key) {
+    return;
   }
+  console.log("Direction: " + ButtonIdMap[key] + ", pressed:" + pressed);
+  let elem = document.getElementById(ButtonIdMap[key]);
+  if (pressed) {
+    elem.style.backgroundColor = "red";
+  } else {
+    elem.style.backgroundColor = "yellow";
+  }
+}
+
+document.addEventListener("keydown", function (e) {
+  keyPressed(e.which, true);
 });
-document.addEventListener("keyup", function(e) {
-  console.log(e.which);
-  document.getElementById("keycode" + key).style.backgroundColor = "yellow";
+document.addEventListener("keyup", function (e) {
+  keyPressed(e.which, false);
 });
