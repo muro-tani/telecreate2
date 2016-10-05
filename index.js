@@ -25,6 +25,10 @@ app.get('/peerReciever', function(req, res) {
     res.sendFile(__dirname + "/client/peerReciever/index.html")
 });
 
+app.get('/create2RemoteController_v0', function(req, res) {
+    res.sendFile(__dirname + "/client/create2RemoteController_v0/index.html")
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
