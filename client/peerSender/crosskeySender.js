@@ -25,7 +25,9 @@ function keyPressed(key, pressed) {
   //Send key data via peerJS
   btnStatus.key = key;
   btnStatus.pressed = pressed;
-  conn.send(btnStatus);
+  if(conn != null) {
+    conn.send(btnStatus);
+  }
 }
 
 document.addEventListener("keydown", function (e) {
