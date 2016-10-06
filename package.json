@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/cdra0624/telecreate2#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "peerjs_fork_firefox40": "^0.3.15"
   }
 }

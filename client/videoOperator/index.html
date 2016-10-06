@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="../favicon.ico" />
+<script type="text/javascript" src="crosskeySender.js"></script>
+<script type="text/javascript" src="../peerjs/peer.js"></script>
+<script type="text/javascript" src="peerSend.js"></script>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+<h1>video Operator</h1>
+  <!--Get myID-->
+  <div>
+      <input type="text" placeholder="Input your ID" id="my-id-input">
+      <button onclick="getmyID()">Get myID</button>
+  </div>
+
+  <!--call button-->
+  <div>
+      <input type="text" placeholder="Input partner ID" id="partner-id-input">
+      <button onclick="callStart()">Start Call</button>
+      <button id="call-end" onclick="callEnd()">End Call</button>
+  </div>
+
+  <!--Display both ID-->
+  <div>
+      <p>MyID: <span id="myID">-</span></p>
+      <p>PartnerID: <span id="partnerID">-</span></p>
+  </div>
+
+  <!--Display arrow keypad-->
+  <table style="width:30%">
+    <tr>
+      <th></th>
+      <th id="forward">&#8673;</th> 
+      <th></th>
+    </tr>
+    <tr>
+      <td id="turnLeft">&#10226;</td>
+      <td></td>
+      <td id="turnRight">&#10227;</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td id="back">&#8675;</td>
+      <td></td>
+    </tr>
+  </table>
+</body>
+</html>
