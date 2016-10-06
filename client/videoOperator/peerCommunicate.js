@@ -25,7 +25,9 @@ function displayMyCamera(){
 function setmyID(){
     myID = document.getElementById("my-id-input").value;
     document.getElementById("myID").innerHTML = myID;
-    startPeerConnection();
+    if(myID){
+        startPeerConnection();
+    } else alert("please input your id");
 }
 
 function startPeerConnection() {
