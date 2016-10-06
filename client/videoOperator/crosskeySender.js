@@ -1,8 +1,8 @@
 var ButtonIdMap = {
-  "38": "forward",
-  "40": "back",
-  "37": "turnLeft",
-  "39": "turnRight"
+  "38": "Forward",
+  "40": "Back",
+  "37": "Left",
+  "39": "Right"
 }
 
 var btnStatus = {
@@ -22,12 +22,7 @@ function keyPressed(key, pressed) {
     elem.style.backgroundColor = "yellow";
   }
 
-  //Send key data via peerJS
-  btnStatus.key = key;
-  btnStatus.pressed = pressed;
-  if(conn != null) {
-    conn.send(btnStatus);
-  }
+  if(conn != null) conn.send(ButtonIdMap[key]);
 }
 
 document.addEventListener("keydown", function (e) {

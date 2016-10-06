@@ -69,26 +69,6 @@ function callEnd() {
     conn.close();
 }
 
-function Reset(){
-    if(conn != null) conn.send("Reset");
-}
-
-function Passive(){
-    if(conn != null) conn.send("Passive");
-}
-
-function Safe(){
-    if(conn != null) conn.send("Safe");
-}
-
-function Full(){
-    if(conn != null) conn.send("Full");
-}
-
 function Beep(){
     if(conn != null) conn.send("Beep");
-}
-
-function Close(){
-    if(conn != null) conn.send("Close");
 }
