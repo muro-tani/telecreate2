@@ -29,8 +29,8 @@ app.get('/create2RemoteController_v0', function(req, res) {
     res.sendFile(__dirname + "/client/create2RemoteController_v0/index.html")
 });
 
-app.get('/simpleVideochat', function(req, res) {
-    res.sendFile(__dirname + "/client/simpleVideochat/index.html")
+app.get('/simpleVideoChat', function(req, res) {
+    res.sendFile(__dirname + "/client/simpleVideoChat/index.html")
 });
 
 app.listen(app.get('port'), function() {
