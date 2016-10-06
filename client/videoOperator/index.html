@@ -15,6 +15,18 @@ table, th, td {
     font-weight: bold;
     background-color: yellow;
 }
+button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
 </style>
 </head>
 <body>
@@ -42,6 +54,15 @@ table, th, td {
       <video id="myVideo" style="width: 300px;" autoplay muted></video>
       <video id="partnerVideo" style="width: 300px;" autoplay></video>
   </div>
+
+  <hr>
+  <button onclick="Reset()">Reset</button>
+  <button onclick="Passive()">Passive</button>
+  <button onclick="Safe()">safe</button>
+  <button onclick="Full()">full</button>
+  <button onclick="Beep()">beep</button>
+  <button onclick="Close()">close</button>
+  <hr>
 
   <!--Display arrow keypad-->
   <table style="width:30%">
