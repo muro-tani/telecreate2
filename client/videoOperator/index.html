@@ -5,7 +5,7 @@
 <link rel="icon" type="image/png" href="../favicon.ico" />
 <script type="text/javascript" src="crosskeySender.js"></script>
 <script type="text/javascript" src="../peerjs/peer.js"></script>
-<script type="text/javascript" src="peerSend.js"></script>
+<script type="text/javascript" src="peerCommunicate.js"></script>
 <style>
 table, th, td {
     border: 1px solid black;
@@ -18,11 +18,11 @@ table, th, td {
 </style>
 </head>
 <body>
-<h1>video Operator</h1>
+<h1>Roomba remote operator with video streaming</h1>
   <!--Get myID-->
   <div>
       <input type="text" placeholder="Input your ID" id="my-id-input">
-      <button onclick="getmyID()">Get myID</button>
+      <button onclick="setmyID()">Set myID</button>
   </div>
 
   <!--call button-->
@@ -36,6 +36,11 @@ table, th, td {
   <div>
       <p>MyID: <span id="myID">-</span></p>
       <p>PartnerID: <span id="partnerID">-</span></p>
+  </div>
+
+  <div>
+      <video id="myVideo" style="width: 300px;" autoplay muted></video>
+      <video id="partnerVideo" style="width: 300px;" autoplay></video>
   </div>
 
   <!--Display arrow keypad-->
@@ -56,5 +61,6 @@ table, th, td {
       <td></td>
     </tr>
   </table>
+
 </body>
 </html>
