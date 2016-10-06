@@ -5,24 +5,21 @@ var ButtonIdMap = {
   "39": "Right"
 }
 
-var btnStatus = {
-  "key" : null,
-  "pressed" : null
-}
-
 function keyPressed(key, pressed) {
   if (key < 37 || 40 < key) {
     return;
   }
-  console.log("Direction: " + ButtonIdMap[key] + ", pressed:" + pressed);
+  //console.log("Direction: " + ButtonIdMap[key] + ", pressed:" + pressed);
   let elem = document.getElementById(ButtonIdMap[key]);
   if (pressed) {
     elem.style.backgroundColor = "red";
+    if(conn != null) conn.send(ButtonIdMap[key]);
+    console.log(ButtonIdMap[key]);
   } else {
     elem.style.backgroundColor = "yellow";
+    if(conn != null) conn.send("Stop");
+    console.log("Stop");
   }
-
-  if(conn != null) conn.send(ButtonIdMap[key]);
 }
 
 document.addEventListener("keydown", function (e) {
