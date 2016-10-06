@@ -50,23 +50,15 @@ function callStart(){
     conn = peer.connect(partnerID);
     document.getElementById("partnerID").innerHTML = partnerID;
     var call = peer.call(partnerID, localStream);
-    call.on('stream', function(stream){
-        document.getElementById("partnerVideo").src = URL.createObjectURL(stream);
-    })
-}
-
-function takeCall(call) {
     connectedCall = call;
-    call.answer(localStream);
-
     call.on('stream', function(stream){
         document.getElementById("partnerVideo").src = URL.createObjectURL(stream);
     })
 }
 
 function callEnd() {
-    connectedCall.close();
     conn.close();
+    connectedCall.close();
 }
 
 function Beep(){
