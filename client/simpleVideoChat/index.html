@@ -1,8 +1,10 @@
 <html>
 <head>
+    <script src="/socket.io/socket.io.js"></script>    
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="../peerjs/peer.js"></script>
     <script type="text/javascript" src="videoChat.js"></script>
+    
 </head>
 <body>
     <h1>Simple Video Chat</h1>
@@ -19,5 +21,8 @@
         <button id="call-start">Start Call</button>
         <button id="call-end">End Call</button>
     </div>
+    <div>
+        <p id="directionStatus"></p>
+    </div>  
 </body>
 </html>
